@@ -58,7 +58,7 @@ else:
 print('')
 '''
 ID = '1773645536'
-token = '5521540621:AAFMxlD7YxpSngo0nMa34KpuRubsjxEOG-A'
+token = '6790219085:AAFrJ0Bbnf4eIhKJPuOB0xjzNrkldbtxj_o'
 
 
 uoijh51= ' هناك مستخدم قام بتشغيل اداتك   '
