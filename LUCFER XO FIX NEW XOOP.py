@@ -1087,7 +1087,7 @@ def bot():
 		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
-def menu(id):
+def menu(my_name,my_id):
 	
 	os.system('clear')
 	banner()
