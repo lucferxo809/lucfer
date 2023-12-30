@@ -556,7 +556,7 @@ def setting():
  
 def passwrd():
 	print('\033[0;92m==================')
-	print("\033[97;1m[\033[92;1m➢\033[97;1m] \x1b[33m\x1b[33m\x1b[33m[\033[0;92m@ZZKGZ \x1b[36mLUCFER XO\x1b[33m] \033[1;92m ")
+	print("\033[97;1m[\033[92;1m➢\033[97;1m] \x1b[33m\x1b[33m\x1b[33m[\033[0;92m@krro6 \x1b[36mLUCFER XO\x1b[33m] \033[1;92m ")
 	print('\033[97;1m[\033[92;1m➢\033[97;1m] \x1b[33m\x1b[33m\x1b[33m[\033[0;92mTOTAL \x1b[36mID\x1b[33m] : ',str(len(id)))
 	print("\033[97;1m[\033[92;1m➢\033[97;1m] \x1b[33m\x1b[33m\x1b[33m[\033[0;92mTODAY \x1b[36mTIME\x1b[33m] : \033[1;92m"+time.strftime("%H:%M")+" ")
 	print('\033[0;96m===============================================')
