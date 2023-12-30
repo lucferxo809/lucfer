@@ -1154,7 +1154,7 @@ def dump_massal():
 		output = render(' S D M',colors=['yellow','blue'], align='center')
 		print(output)
 		print(('—'*25)+'\n• XO By @krro6 •\n'+('—'*25))
-		webbrowser.open(f'https://t.me/M_T_F')
+		webbrowser.open(f'https://t.me/LUCFER_XO_AND')
 		kumpulkan = int(input(f'ڪم ايدي تريد تصيد بيهم | 𝐇𝐎𝐖 𝐌𝐀𝐍𝐘 𝐇𝐀𝐍𝐃𝐒?  : '))
 		os.system('cls' if os.name == 'nt' else 'clear')
 	except ValueError:
