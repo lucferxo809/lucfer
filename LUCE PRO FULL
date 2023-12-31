@@ -39,7 +39,7 @@ print('\n')
 import requests
 token =('6790219085:AAFrJ0Bbnf4eIhKJPuOB0xjzNrkldbtxj_o')
 ID =('1773645536')
-uoijh51= ' ههناك كواد شغل ادات جديدة '
+uoijh51= ' 🤖ههناك كواد🗣️ شغل ✅ادات جديدة '
 requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(uoijh51))
 os.system('clear')
 cetak(nel('\t• Sedang Menginstall Modul Requests •'))
