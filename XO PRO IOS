@@ -1,6 +1,4 @@
 # Decode By • @CEF_Hossam •
-import requests, webbrowser
-webbrowser.open(f'https://t.me/LUCFER_XO_AND')
 
 #-----------------[ IMPORT-MODULE ]-------------------#
 import requests,bs4,json,os,sys,random,datetime,time,re
@@ -62,7 +60,7 @@ ID = '1773645536'
 token = '6790219085:AAFrJ0Bbnf4eIhKJPuOB0xjzNrkldbtxj_o'
 
 
-uoijh51= ' هناك مستخدم قام بتشغيل اداتك   '
+uoijh51= ' 🍏هناك من شغل ادات ايفون 🍏   '
 requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(uoijh51))
 
 try:
